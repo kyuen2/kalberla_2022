@@ -10,17 +10,17 @@ We suggest the authors of Kalberla et.al (2022) to **perform an internal code ch
 
 ### What is this github page about?
 
-Recently Kalberla et. al (2022) wrote an interesting article (arXiv: https://arxiv.org/pdf/2202.01610.pdf) commenting on our previous publication (Velocity Decomposition Algorithm, Yuen et.al, 2021, ApJ, 910, 2, 161) claiming that our technique and also our prior simulations are not compatible to realistic neutral hydrogen (HI) observations. However, upon investigation, we discovered that Kalberla et.al (2022) made a very simple programmatic mistake, by typing
-$$
-  p_v &= p - \left( \langle pI\rangle-\langle p\rangle\langle I \rangle\right)\frac{I-\langle I\rangle}{\sigma_I^2}
-$$
+Recently Kalberla et. al (2022) wrote an interesting article (arXiv: https://arxiv.org/pdf/2202.01610.pdf) commenting on our previous publication (Velocity Decomposition Algorithm, Yuen et.al, 2021, ApJ, 910, 2, 161) claiming that our technique and also our prior simulations are not compatible to realistic neutral hydrogen (HI) observations. However, upon investigation, we discovered that Kalberla et.al (2022) made a very simple programmatic mistake, by typing (in julia code)
+```julia
+p_v = p - (mean(p.*I).-mean(p)*mean(I)).*(I.-mean(I))./std(I)^2
+```
 
-to something that we reserve engineered
-$$
-  p_{v,kalberla22} &= p - \left( \langle {\color{red} p} \rangle-\langle p\rangle\langle I \rangle\right)\frac{I-\langle I\rangle}{\sigma_I^2}
-$$
+to something that we reserve engineered (See A&A ...)
+```julia
+p_v = p - (mean(p).-mean(p)*mean(I)).*(I.-mean(I))./std(I)^2
+```
 
-That will invalidate their _whole_ paper, including 14 out of 15 of their figures, all discussions starting from Sec 1 to 7, 9, and also the claims that they made to us. We found that the publicity of our computational process would facilitate the general scientific community to understand why we can recognize their mistakes so easily _without even access their codes_.
+Notice that the second term changes from `mean(p.*I)` to `mean(p)`. This programmatic mistake that we found will invalidate their _whole_ paper, including 14 out of 15 of their figures, all discussions starting from Sec 1 to 7, 9, and also the claims that they made to us. We found that the publicity of our computational process would facilitate the general scientific community to understand why we can recognize their mistakes so easily _without even access their codes_.
 
 ### What is Velocity Decomposition Algorithm
 
