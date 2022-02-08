@@ -15,7 +15,7 @@ Recently Kalberla et. al (2022) wrote an interesting article (arXiv: https://arx
 p_v = p - (mean(p.*I).-mean(p)*mean(I)).*(I.-mean(I))./std(I)^2
 ```
 
-to something that we reserve engineered (See A&A ...)
+to something that they might have done (See A&A ...)
 ```julia
 p_v = p - (mean(p).-mean(p)*mean(I)).*(I.-mean(I))./std(I)^2
 ```
