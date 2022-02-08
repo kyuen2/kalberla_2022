@@ -2,7 +2,7 @@
 
 Author: Ka Ho Yuen (UW Madison, kyuen2@wisc.edu), Ka Wai Ho (UW Madison, kho33@wisc.edu)
 
-Our official response to the recent publication Kalberla et.al (2022, P. M. W. Kalberla, J. Kerp, U. Haud, DOI: https://doi.org/10.1051/0004-6361/202142250). Step-by-step code and tutorial included. For formal response, see A&A ... 
+Our official response to the recent publication Kalberla et.al (2022, P. M. W. Kalberla, J. Kerp, U. Haud, DOI: https://doi.org/10.1051/0004-6361/202142250). Step-by-step code and tutorial included. For formal response, see A&A ... / arXiv ...
 
 ## TL;DR? 
 
@@ -22,9 +22,9 @@ p_v = p - (mean(p).-mean(p)*mean(I)).*(I.-mean(I))./std(I)^2
 
 Notice that the second term changes from `mean(p.*I)` to `mean(p)`. This programmatic mistake that we found will invalidate their _whole_ paper, including 14 out of 15 of their figures, all discussions starting from Sec 1 to 7, 9, and also the claims that they made to us. We found that the publicity of our computational process would facilitate the general scientific community to understand why we can recognize their mistakes so easily _without even access their codes_.
 
-## What is Velocity Decomposition Algorithm
+## What is Velocity Decomposition Algorithm?
 
-VDA is an innovative algorithm (see github: kyuen2/LazDDA.jl) in retrieving the "velocity casutics" in observations. Velocity caustics is an imprint of MHD turbulence velocity motions left in the velocity channel space. The caustics will appear even when the astrophysical plasma has no density perturbations (i.e. incompressible fluid). 
+Velocity Decomposition Algorithm (VDA) is an innovative algorithm (see github: kyuen2/LazDDA.jl) in retrieving the "velocity casutics" in observations. Velocity caustics is an imprint of MHD turbulence velocity motions left in the velocity channel space. The caustics will appear even when the astrophysical plasma has no density perturbations (i.e. incompressible fluid). We include a number of examples illustating the power of the VDA for different kinds of media.
 
 ## So what does this github page contains?
 
