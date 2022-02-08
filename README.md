@@ -8,7 +8,7 @@ Our official response to the recent publication Kalberla et.al (2022, P. M. W. K
 
 We suggest the authors of Kalberla et.al (2022) to **perform an internal code check before publishing an article claiming something is wrong.**
 
-### What is this github page about?
+## What is this github page about?
 
 Recently Kalberla et. al (2022) wrote an interesting article (arXiv: https://arxiv.org/pdf/2202.01610.pdf) commenting on our previous publication (Velocity Decomposition Algorithm, Yuen et.al, 2021, ApJ, 910, 2, 161) claiming that our technique and also our prior simulations are not compatible to realistic neutral hydrogen (HI) observations. However, upon investigation, we discovered that Kalberla et.al (2022) made a very simple programmatic mistake, by typing (in julia code)
 ```julia
@@ -22,10 +22,11 @@ p_v = p - (mean(p).-mean(p)*mean(I)).*(I.-mean(I))./std(I)^2
 
 Notice that the second term changes from `mean(p.*I)` to `mean(p)`. This programmatic mistake that we found will invalidate their _whole_ paper, including 14 out of 15 of their figures, all discussions starting from Sec 1 to 7, 9, and also the claims that they made to us. We found that the publicity of our computational process would facilitate the general scientific community to understand why we can recognize their mistakes so easily _without even access their codes_.
 
-### What is Velocity Decomposition Algorithm
+## What is Velocity Decomposition Algorithm
 
 VDA is an innovative algorithm (see github: kyuen2/LazDDA.jl) in retrieving the "velocity casutics" in observations. Velocity caustics is an imprint of MHD turbulence velocity motions left in the velocity channel space. The caustics will appear even when the astrophysical plasma has no density perturbations (i.e. incompressible fluid). 
 
-### So what does this github page contains?
+## So what does this github page contains?
 
-Here we provide a streamlined `Julia` template for anyone who has access of the page to replicate our results. We will also provide comments step by step to make sure the readers can understand each step
+Here we provide a streamlined `Julia` template for anyone who has access of the page to replicate our results. We will also provide comments step by step to make sure the readers can understand each step.
+
