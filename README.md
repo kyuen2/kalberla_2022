@@ -24,7 +24,7 @@ Notice that the second term changes from `mean(p.*I)` to `mean(p)`. This program
 
 ## What is Velocity Decomposition Algorithm?
 
-Velocity Decomposition Algorithm (VDA) is an innovative algorithm (see github: kyuen2/LazDDA.jl) in retrieving the "velocity casutics" in observations. Velocity caustics is an imprint of MHD turbulence velocity motions left in the velocity channel space. The caustics will appear even when the astrophysical plasma has no density perturbations (i.e. incompressible fluid). We include a number of examples illustating the power of the VDA for different kinds of media.
+Velocity Decomposition Algorithm (VDA) is an innovative algorithm (see https://github.com/kyuen2/LazDDA) in retrieving the "velocity casutics" in observations. Velocity caustics is an imprint of MHD turbulence velocity motions left in the velocity channel space. The caustics will appear even when the astrophysical plasma has no density perturbations (i.e. incompressible fluid). We include a number of examples illustating the power of the VDA for different kinds of media.
 
 ## So what does this github page contains?
 
