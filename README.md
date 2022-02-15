@@ -2,7 +2,7 @@
 
 Author: Ka Ho Yuen (UW Madison, kyuen2@wisc.edu), Ka Wai Ho (UW Madison, kho33@wisc.edu)
 
-Our official response to the recent publication Kalberla et.al (2022, P. M. W. Kalberla, J. Kerp, U. Haud, DOI: https://doi.org/10.1051/0004-6361/202142250). Step-by-step code and tutorial included. For formal response, see A&A ... / arXiv ...
+Our official response to the recent publication Kalberla et.al (2022, P. M. W. Kalberla, J. Kerp, U. Haud, DOI: https://doi.org/10.1051/0004-6361/202142250). Step-by-step code and tutorial included here: https://github.com/kyuen2/kalberla_2022/blob/main/Kalberla_2022_workout.ipynb.  For formal response, see A&A ... / arXiv ...
 
 ## TL;DR? 
 
