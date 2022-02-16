@@ -10,7 +10,7 @@ We suggest the authors of Kalberla et.al (2022) to **perform an internal code ch
 
 ## What is this github page about?
 
-Recently Kalberla et. al (2022) wrote an interesting article (arXiv: https://arxiv.org/pdf/2202.01610.pdf) commenting on our previous publication (Velocity Decomposition Algorithm, Yuen et.al, 2021, ApJ, 910, 2, 161) claiming that our technique and also our prior simulations are not compatible to realistic neutral hydrogen (HI) observations. However, upon investigation, we discovered that Kalberla et.al (2022) made a very simple programmatic mistake, by typing (in julia code)
+Recently Kalberla et. al (2022) wrote an interesting article (arXiv: https://arxiv.org/pdf/2202.01610.pdf) commenting on our previous publication (Velocity Decomposition Algorithm, Yuen et.al, 2021, ApJ, 910, 2, 161) claiming that our technique and also our prior simulations are not compatible to realistic neutral hydrogen (HI) observations. However, upon investigation, we discovered that Kalberla et.al (2022) very likely made a very simple programmatic mistake, by typing (in julia code)
 ```julia
 p_v = p - (mean(p.*I).-mean(p)*mean(I)).*(I.-mean(I))./std(I)^2
 ```
