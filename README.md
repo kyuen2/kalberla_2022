@@ -20,7 +20,7 @@ to something that they might have done (See A&A ...)
 p_v = p - (mean(p).-mean(p)*mean(I)).*(I.-mean(I))./std(I)^2
 ```
 
-Notice that the second term changes from `mean(p.*I)` to `mean(p)`. This programmatic mistake that we found will invalidate their _whole_ paper, including 14 out of 15 of their figures, all discussions starting from Sec 1 to 7, 9, and also the claims that they made to us. We found that the publicity of our computational process would facilitate the general scientific community to understand why we can recognize their mistakes so easily _without even access their codes_. See `readme` of https://github.com/kyuen2/LazDDA for further examples.
+Notice that the second term changes from `mean(p.*I)` to `mean(p)`. This programmatic mistake that we found will invalidate their _whole_ paper, including 14 out of 15 of their figures, all discussions starting from Sec 1 to 7, 9, and also the claims that they made to us. We found that the publicity of our computational process would facilitate the general scientific community to understand why we can recognize their mistakes so easily _without even accessing their codes_. See `readme` of https://github.com/kyuen2/LazDDA for further examples.
 
 ## What is Velocity Decomposition Algorithm?
 
