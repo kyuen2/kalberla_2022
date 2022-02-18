@@ -23,6 +23,7 @@ p_v = p - (mean(p).-mean(p)*mean(I)).*(I.-mean(I))./std(I)^2
 Notice that the second term changes from `mean(p.*I)` to `mean(p)`. This programmatic mistake [1] that we found will invalidate their _whole_ paper, including 14 out of 15 of their figures, all discussions starting from Sec 1 to 7, 9, and also the claims that they made to us. We found that the publicity of our computational process would facilitate the general scientific community to understand why we can recognize their mistakes so easily _without even accessing their codes_. See `readme` of https://github.com/kyuen2/LazDDA for further examples.
 
 
+[1]: Notice that our template reproduces very similar results of their mistakes, it can be more.. However, it is not our full responsibility to find out the mistakes in others' publications. Moreover, mathematically <pdpv>=0 no matter what choice of p and I you pick, see https://github.com/kyuen2/LazDDA
 
 ## What is Velocity Decomposition Algorithm?
 
@@ -32,5 +33,8 @@ Velocity Decomposition Algorithm (VDA) is an innovative algorithm (see https://g
 
 Here we provide a streamlined `Julia` template for anyone who has access of the page to replicate our results. We will also provide comments step by step to make sure the readers can understand each step.
 
-[1]: Notice that our template reproduces very similar results of their mistakes, it can be more.. However, it is not our full responsibility to find out the mistakes in others' publications. Moreover, mathematically <pdpv>=0 no matter what choice of p and I you pick, see https://github.com/kyuen2/LazDDA
+  
+## `Julia` is too complicated to install, what should I do?
+  
+I have built a standard environment here (https://hub.docker.com/repository/docker/kyuen2/gsa-hi) which you can upload the template in this repository and reproduce the exact same results. If some standard package is missing, refer to the docker instruction I wrote there.
 
